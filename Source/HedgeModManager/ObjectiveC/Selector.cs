@@ -6,7 +6,7 @@ namespace HedgeModManager.ObjectiveC
     [SupportedOSPlatform("macos")]
     public readonly partial struct Selector
     {
-        [LibraryImport("/usr/lib/libobjc.A.dylib", StringMarshalling = StringMarshalling.Utf8)]
+        [LibraryImport(ObjectiveC.ObjCRuntime, StringMarshalling = StringMarshalling.Utf8)]
         private static unsafe partial IntPtr sel_getUid(string name);
 
         public readonly IntPtr SelPtr;
